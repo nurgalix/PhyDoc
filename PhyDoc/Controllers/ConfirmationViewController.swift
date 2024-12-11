@@ -181,15 +181,12 @@ class ConfirmationViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success:
-                    print("Appointment created successfully!")
-                    // Navigate to SuccessViewController
                     let successVC = SuccessViewController()
                     self.navigationController?.pushViewController(successVC, animated: true)
                     
                 case .failure(let error):
                     print("Failed to create appointment: \(error.localizedDescription)")
                     
-                    // Show an alert to inform the user of the failure
                     let alert = UIAlertController(
                         title: "Ошибка",
                         message: "Не удалось записаться на прием. Пожалуйста, попробуйте позже.",
@@ -208,7 +205,7 @@ class ConfirmationViewController: UIViewController {
             return
         }
 
-        guard let url = URL(string: "https://your-api-url.com/appoint") else {
+        guard let url = URL(string: "https://phydoc-test-2d45590c9688.herokuapp.com/docs/appoint") else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
             return
         }
@@ -231,20 +228,19 @@ class ConfirmationViewController: UIViewController {
         }
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            // Check for network or dataTask-level errors
+            
             if let error = error {
                 completion(.failure(error))
                 return
             }
             
-            // Check HTTP response status
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No response from server"])))
                 return
             }
             
             guard httpResponse.statusCode == 200 else {
-                // You might want to inspect `data` and `httpResponse` to debug what went wrong
+            
                 completion(.failure(NSError(domain: "", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Invalid response with status code: \(httpResponse.statusCode)"])))
                 return
             }
