@@ -167,8 +167,92 @@ class ConfirmationViewController: UIViewController {
     }
     
     @objc private func nextButtonTapped() {
-        print("Appointment confirmed!")
-        let successVC = SuccessViewController()
-        navigationController?.pushViewController(successVC, animated: true)
+        guard let recordData = recordData else {
+            print("Record data is missing")
+            return
+        }
+        
+        guard let slotId = recordData.slotId else {
+            print("Slot ID is missing")
+            return
+        }
+        
+        sendAppointmentData(recordData: recordData) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    print("Appointment created successfully!")
+                    // Navigate to SuccessViewController
+                    let successVC = SuccessViewController()
+                    self.navigationController?.pushViewController(successVC, animated: true)
+                    
+                case .failure(let error):
+                    print("Failed to create appointment: \(error.localizedDescription)")
+                    
+                    // Show an alert to inform the user of the failure
+                    let alert = UIAlertController(
+                        title: "Ошибка",
+                        message: "Не удалось записаться на прием. Пожалуйста, попробуйте позже.",
+                        preferredStyle: .alert
+                    )
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
+
+    func sendAppointmentData(recordData: RecordData, completion: @escaping (Result<Void, Error>) -> Void) {
+        guard let slotId = recordData.slotId else {
+            completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Slot ID is missing"])))
+            return
+        }
+
+        guard let url = URL(string: "https://your-api-url.com/appoint") else {
+            completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let payload: [String: Any] = [
+            "slot_id": slotId,
+            "type": recordData.format ?? "unknown"
+        ]
+
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: payload, options: [])
+            request.httpBody = jsonData
+        } catch {
+            completion(.failure(error))
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            // Check for network or dataTask-level errors
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            // Check HTTP response status
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No response from server"])))
+                return
+            }
+            
+            guard httpResponse.statusCode == 200 else {
+                // You might want to inspect `data` and `httpResponse` to debug what went wrong
+                completion(.failure(NSError(domain: "", code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey: "Invalid response with status code: \(httpResponse.statusCode)"])))
+                return
+            }
+
+            completion(.success(()))
+        }.resume()
+    }
+
+
 }
+

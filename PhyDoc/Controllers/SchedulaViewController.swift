@@ -223,6 +223,7 @@ class ScheduleViewController: UIViewController {
         recordData?.selectedDate = selectedSlot.datetime.split(separator: "T")[0].description // Extract date
         recordData?.selectedTime = selectedSlot.datetime.split(separator: "T")[1].prefix(5).description // Extract time
         recordData?.selectedCost = "\(selectedSlot.price)₸"
+        recordData?.slotId = selectedSlot.id 
         
         let confirmationVC = ConfirmationViewController()
         confirmationVC.recordData = recordData

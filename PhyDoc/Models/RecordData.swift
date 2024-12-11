@@ -7,4 +7,5 @@ struct RecordData {
     var selectedDate: String?
     var selectedTime: String?
     var selectedCost: String?
+    var slotId: Int? 
 }
