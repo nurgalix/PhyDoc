@@ -10,9 +10,18 @@
 		DCC706002D07257800C0B63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC705FF2D07257800C0B63F /* AppDelegate.swift */; };
 		DCC706022D07257800C0B63F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC706012D07257800C0B63F /* SceneDelegate.swift */; };
 		DCC706042D07257800C0B63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC706032D07257800C0B63F /* ViewController.swift */; };
-		DCC706072D07257800C0B63F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DCC706062D07257800C0B63F /* Base */; };
 		DCC706092D07257A00C0B63F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC706082D07257A00C0B63F /* Assets.xcassets */; };
 		DCC7060C2D07257A00C0B63F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DCC7060B2D07257A00C0B63F /* Base */; };
+		DCC706142D0727CC00C0B63F /* FormatSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC706132D0727CC00C0B63F /* FormatSelectionViewController.swift */; };
+		DCC706172D07280D00C0B63F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCC706162D07280D00C0B63F /* SnapKit */; };
+		DCF6D5CB2D0875A600041057 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5CA2D0875A600041057 /* RecordViewController.swift */; };
+		DCF6D5CD2D099CB700041057 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5CC2D099CB700041057 /* Schedule.swift */; };
+		DCF6D5CF2D09A88F00041057 /* SchedulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5CE2D09A88F00041057 /* SchedulaViewController.swift */; };
+		DCF6D5D12D09AB0E00041057 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5D02D09AB0E00041057 /* SectionHeaderView.swift */; };
+		DCF6D5D32D09CEB300041057 /* SlotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5D22D09CEB300041057 /* SlotCell.swift */; };
+		DCF6D5D52D0A066D00041057 /* RecordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5D42D0A066D00041057 /* RecordData.swift */; };
+		DCF6D5D72D0A075F00041057 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5D62D0A075F00041057 /* ConfirmationViewController.swift */; };
+		DCF6D5D92D0A0A1300041057 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6D5D82D0A0A1300041057 /* SuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +29,18 @@
 		DCC705FF2D07257800C0B63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC706012D07257800C0B63F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DCC706032D07257800C0B63F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCC706062D07257800C0B63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCC706082D07257A00C0B63F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCC7060B2D07257A00C0B63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCC7060D2D07257A00C0B63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC706132D0727CC00C0B63F /* FormatSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatSelectionViewController.swift; sourceTree = "<group>"; };
+		DCF6D5CA2D0875A600041057 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		DCF6D5CC2D099CB700041057 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		DCF6D5CE2D09A88F00041057 /* SchedulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulaViewController.swift; sourceTree = "<group>"; };
+		DCF6D5D02D09AB0E00041057 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		DCF6D5D22D09CEB300041057 /* SlotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotCell.swift; sourceTree = "<group>"; };
+		DCF6D5D42D0A066D00041057 /* RecordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordData.swift; sourceTree = "<group>"; };
+		DCF6D5D62D0A075F00041057 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		DCF6D5D82D0A0A1300041057 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC706172D07280D00C0B63F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,55 @@
 		DCC705FE2D07257800C0B63F /* PhyDoc */ = {
 			isa = PBXGroup;
 			children = (
-				DCC705FF2D07257800C0B63F /* AppDelegate.swift */,
-				DCC706012D07257800C0B63F /* SceneDelegate.swift */,
-				DCC706032D07257800C0B63F /* ViewController.swift */,
-				DCC706052D07257800C0B63F /* Main.storyboard */,
-				DCC706082D07257A00C0B63F /* Assets.xcassets */,
-				DCC7060A2D07257A00C0B63F /* LaunchScreen.storyboard */,
+				DCF6D5DD2D0A138300041057 /* Supporting */,
+				DCF6D5DA2D0A134E00041057 /* Controllers */,
+				DCF6D5DB2D0A135B00041057 /* Views */,
+				DCF6D5DC2D0A136500041057 /* Models */,
 				DCC7060D2D07257A00C0B63F /* Info.plist */,
 			);
 			path = PhyDoc;
+			sourceTree = "<group>";
+		};
+		DCF6D5DA2D0A134E00041057 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCC706132D0727CC00C0B63F /* FormatSelectionViewController.swift */,
+				DCF6D5CA2D0875A600041057 /* RecordViewController.swift */,
+				DCF6D5CE2D09A88F00041057 /* SchedulaViewController.swift */,
+				DCF6D5D62D0A075F00041057 /* ConfirmationViewController.swift */,
+				DCF6D5D82D0A0A1300041057 /* SuccessViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCF6D5DB2D0A135B00041057 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCF6D5D02D09AB0E00041057 /* SectionHeaderView.swift */,
+				DCF6D5D22D09CEB300041057 /* SlotCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCF6D5DC2D0A136500041057 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCF6D5CC2D099CB700041057 /* Schedule.swift */,
+				DCF6D5D42D0A066D00041057 /* RecordData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCF6D5DD2D0A138300041057 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				DCC705FF2D07257800C0B63F /* AppDelegate.swift */,
+				DCC706012D07257800C0B63F /* SceneDelegate.swift */,
+				DCC706032D07257800C0B63F /* ViewController.swift */,
+				DCC7060A2D07257A00C0B63F /* LaunchScreen.storyboard */,
+				DCC706082D07257A00C0B63F /* Assets.xcassets */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +141,9 @@
 			dependencies = (
 			);
 			name = PhyDoc;
+			packageProductDependencies = (
+				DCC706162D07280D00C0B63F /* SnapKit */,
+			);
 			productName = PhyDoc;
 			productReference = DCC705FC2D07257800C0B63F /* PhyDoc.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = DCC705F32D07257800C0B63F;
+			packageReferences = (
+				DCC706152D07280D00C0B63F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DCC705FD2D07257800C0B63F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +191,6 @@
 			files = (
 				DCC706092D07257A00C0B63F /* Assets.xcassets in Resources */,
 				DCC7060C2D07257A00C0B63F /* Base in Resources */,
-				DCC706072D07257800C0B63F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF6D5CD2D099CB700041057 /* Schedule.swift in Sources */,
+				DCF6D5CF2D09A88F00041057 /* SchedulaViewController.swift in Sources */,
+				DCC706142D0727CC00C0B63F /* FormatSelectionViewController.swift in Sources */,
+				DCF6D5D32D09CEB300041057 /* SlotCell.swift in Sources */,
+				DCF6D5D72D0A075F00041057 /* ConfirmationViewController.swift in Sources */,
+				DCF6D5D12D09AB0E00041057 /* SectionHeaderView.swift in Sources */,
 				DCC706042D07257800C0B63F /* ViewController.swift in Sources */,
+				DCF6D5D52D0A066D00041057 /* RecordData.swift in Sources */,
+				DCF6D5CB2D0875A600041057 /* RecordViewController.swift in Sources */,
 				DCC706002D07257800C0B63F /* AppDelegate.swift in Sources */,
+				DCF6D5D92D0A0A1300041057 /* SuccessViewController.swift in Sources */,
 				DCC706022D07257800C0B63F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +219,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DCC706052D07257800C0B63F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCC706062D07257800C0B63F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DCC7060A2D07257A00C0B63F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +360,6 @@
 				INFOPLIST_FILE = PhyDoc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +386,6 @@
 				INFOPLIST_FILE = PhyDoc/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCC706152D07280D00C0B63F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCC706162D07280D00C0B63F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC706152D07280D00C0B63F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCC705F42D07257800C0B63F /* Project object */;
 }
