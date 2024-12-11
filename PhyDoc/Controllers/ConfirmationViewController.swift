@@ -205,7 +205,7 @@ class ConfirmationViewController: UIViewController {
             return
         }
 
-        guard let url = URL(string: "https://phydoc-test-2d45590c9688.herokuapp.com/docs/appoint") else {
+        guard let url = URL(string: "https://phydoc-test-2d45590c9688.herokuapp.com/appoint") else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
             return
         }
